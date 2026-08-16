@@ -1,0 +1,15 @@
+{
+  "name": "Adnaan Hoosen | Portfolio",
+  "short_name": "Adnaan Hoosen",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#07090e",
+  "theme_color": "#07090e",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    }
+  ]
+}

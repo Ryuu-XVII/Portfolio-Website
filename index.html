@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07090e">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Adnaan Hoosen | Portfolio - AI & Full-Stack Software Engineer</title>
+    <meta name="description"
+        content="Portfolio of Adnaan Hoosen, a software engineering graduate specializing in on-device AI applications, Stable Diffusion integration, and scalable full-stack web applications.">
+    <link rel="canonical" href="https://adnaan-portfolio-2026.web.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Adnaan Hoosen | Portfolio - AI & Full-Stack Software Engineer">
+    <meta property="og:description"
+        content="Portfolio of Adnaan Hoosen, a software engineering graduate specializing in on-device AI applications, Stable Diffusion integration, and scalable full-stack web applications.">
+    <meta property="og:url" content="https://adnaan-portfolio-2026.web.app/">
+    <meta property="og:image" content="https://adnaan-portfolio-2026.web.app/image/me.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adnaan Hoosen | Portfolio - AI & Full-Stack Software Engineer">
+    <meta name="twitter:description"
+        content="Portfolio of Adnaan Hoosen, a software engineering graduate specializing in on-device AI applications, Stable Diffusion integration, and scalable full-stack web applications.">
+    <meta name="twitter:image" content="https://adnaan-portfolio-2026.web.app/image/me.jpg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
+    <link rel="icon" type="image/png" href="/favicon.png?v=2">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Adnaan Hoosen",
+      "url": "https://adnaan-portfolio-2026.web.app/",
+      "jobTitle": "Software Engineering Graduate",
+      "email": "mailto:adnaanhoosen51@gmail.com",
+      "sameAs": [
+        "https://www.linkedin.com/in/adnaan-hoosen-4546b4356",
+        "https://github.com/Ryuu-XVII"
+      ]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Interactive Background Particles Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Neon Background Ambient Glow Orbs -->
+    <div class="bg-glow-orb orb-1"></div>
+    <div class="bg-glow-orb orb-2"></div>
+
+    <!-- Floating Glass Navigation Bar -->
+    <header id="global-header">
+        <div class="nav-container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html" id="logo-link">Adnaan H<span class="logo-dot"></span></a>
+                </div>
+
+                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link active" id="nav-home">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link" id="nav-projects">Projects</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Transition Container for Dynamic Swapping -->
+    <main id="main-content" class="page-container">
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="hero-content section-padding">
+            <div class="container">
+                <div class="hero-grid">
+
+                    <div class="hero-text reveal-left">
+                        <span class="hero-greeting">Welcome to my space</span>
+                        <h1 class="hero-name">Hi, I'm <span class="text-gradient">Adnaan Hoosen</span></h1>
+                        <div class="hero-subtitle">
+                            <span class="typewriter-text"></span><span class="typewriter-cursor">|</span>
+                        </div>
+                        <p class="hero-desc">
+                            Software Engineering graduate with hands-on experience building local, on-device AI
+                            applications, modern 3D Three.js assistants, and secure full-stack database architectures.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="projects.html" class="btn btn-primary" id="hero-btn-projects">Explore Projects</a>
+                            <a href="contact.html" class="btn btn-secondary" id="hero-btn-contact">Get In Touch</a>
+                        </div>
+                    </div>
+
+                    <div class="hero-visual reveal-right">
+                        <div class="hero-image-frame">
+                            <!-- Premium dynamic placeholder avatar generated internally representing high-tech developer -->
+                            <img src="image/logo.jpg" alt="Adnaan Hoosen" class="hero-image">
+                        </div>
+
+                        <!-- Floating Glass Certifications badges showing direct CV accomplishments -->
+                        <div class="hero-floating-badge badge-azure reveal delay-200">
+                            <img src="image/A.png" alt="Azure Logo">
+                            <div class="badge-info">
+                                <p class="badge-text-primary">Azure Certified</p>
+                                <p class="badge-text-secondary">Data Fundamentals</p>
+                            </div>
+                        </div>
+
+                        <div class="hero-floating-badge badge-dev reveal delay-400">
+                            <img src="image/J.png" alt="JS Logo">
+                            <div class="badge-info">
+                                <p class="badge-text-primary">Certiport JS/HTML</p>
+                                <p class="badge-text-secondary">IT Specialist</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Quick stats grid summarizing resume details -->
+                <div class="stats-grid reveal delay-300">
+                    <div class="glass-card stat-card">
+                        <div class="stat-number text-gradient">12+</div>
+                        <div class="stat-label">Engineering Projects</div>
+                    </div>
+                    <div class="glass-card stat-card">
+                        <div class="stat-number text-gradient">3</div>
+                        <div class="stat-label">Industry Certifications</div>
+                    </div>
+                    <div class="glass-card stat-card">
+                        <div class="stat-number text-gradient">3</div>
+                        <div class="stat-label">Internships</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- HOMEPAGE HIGHLIGHTS -->
+        <section id="highlights" class="section-padding" style="padding-top: 2rem;">
+            <div class="container">
+                <div class="section-title-wrap reveal">
+                    <h2 class="section-title">Featured <span class="text-gradient">Creations</span></h2>
+                    <p class="section-desc">A brief showcase of advanced applications I have built using local neural
+                        networks, full-stack tools, and 3D web spaces.</p>
+                </div>
+
+                <div class="projects-grid">
+
+                    <!-- Mira AI Card -->
+                    <div class="project-card-wrap reveal delay-100">
+                        <div class="glass-card project-card">
+                            <div class="project-card-image-wrap">
+                                <img loading="lazy" src="image/mira_ai_mockup.png" alt="Mira AI 3D assistant representation"
+                                    class="project-card-img">
+                                <div class="project-card-image-overlay"></div>
+                                <span class="project-card-category">AI & Data</span>
+                            </div>
+                            <div class="project-card-content">
+                                <h3 class="project-card-title">Mira AI</h3>
+                                <p class="project-card-desc">3D React/Three.js AI assistant UI featuring local, fully
+                                    private LLM inference running on-device via node-llama-cpp with streaming token
+                                    speeds.</p>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">React</span>
+                                    <span class="tech-badge">Three.js</span>
+                                    <span class="tech-badge">Node.js</span>
+                                    <span class="tech-badge">C++ Local LLM</span>
+                                </div>
+                                <div class="project-btn-wrap">
+                                    <button class="project-btn" data-project="mira-ai" id="highlight-btn-mira">Explore
+                                        Architecture</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lumina AI Card -->
+                    <div class="project-card-wrap reveal delay-200">
+                        <div class="glass-card project-card">
+                            <div class="project-card-image-wrap">
+                                <img loading="lazy" src="image/lumina_ai_mockup.png" alt="Lumina AI generator representation"
+                                    class="project-card-img">
+                                <div class="project-card-image-overlay"></div>
+                                <span class="project-card-category">AI & Data</span>
+                            </div>
+                            <div class="project-card-content">
+                                <h3 class="project-card-title">Lumina AI</h3>
+                                <p class="project-card-desc">Windows desktop Stable Diffusion (SD-Turbo) generation
+                                    client built using Electron, React, and Torch-DirectML for full local hardware
+                                    acceleration.</p>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">Electron</span>
+                                    <span class="tech-badge">React</span>
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">PyTorch DirectML</span>
+                                </div>
+                                <div class="project-btn-wrap">
+                                    <button class="project-btn" data-project="lumina-ai"
+                                        id="highlight-btn-lumina">Explore Architecture</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RealHome Card -->
+                    <div class="project-card-wrap reveal delay-300">
+                        <div class="glass-card project-card">
+                            <div class="project-card-image-wrap">
+                                <img loading="lazy" src="image/OIP2.jpeg" alt="RealHome Real Estate listing application"
+                                    class="project-card-img">
+                                <div class="project-card-image-overlay"></div>
+                                <span class="project-card-category">Full-Stack</span>
+                            </div>
+                            <div class="project-card-content">
+                                <h3 class="project-card-title">RealHome</h3>
+                                <p class="project-card-desc">Interactive real estate marketplace connecting agents and
+                                    seekers with secure authentication, listings dashboards, and API map rendering.</p>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">HTML5</span>
+                                    <span class="tech-badge">CSS3</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                    <span class="tech-badge">PHP & MySQL</span>
+                                </div>
+                                <div class="project-btn-wrap">
+                                    <button class="project-btn" data-project="realhome"
+                                        id="highlight-btn-realhome">Explore Architecture</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Adnaan Hoosen.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Drawer Modal (Dynamic details) -->
+    <div id="project-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+        <div class="modal-content-wrap">
+            <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+            <div class="modal-body">
+                <!-- Filled dynamically by JavaScript -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

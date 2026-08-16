@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07090e">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Adnaan Hoosen | Contact - Let's Connect</title>
+    <meta name="description"
+        content="Get in touch with Adnaan Hoosen. Connect directly through email, LinkedIn, GitHub, or phone.">
+    <link rel="canonical" href="https://adnaan-portfolio-2026.web.app/contact.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Adnaan Hoosen | Contact - Let's Connect">
+    <meta property="og:description"
+        content="Get in touch with Adnaan Hoosen. Connect directly through email, LinkedIn, GitHub, or phone.">
+    <meta property="og:url" content="https://adnaan-portfolio-2026.web.app/contact.html">
+    <meta property="og:image" content="https://adnaan-portfolio-2026.web.app/image/me.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adnaan Hoosen | Contact - Let's Connect">
+    <meta name="twitter:description"
+        content="Get in touch with Adnaan Hoosen. Connect directly through email, LinkedIn, GitHub, or phone.">
+    <meta name="twitter:image" content="https://adnaan-portfolio-2026.web.app/image/me.jpg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
+    <link rel="icon" type="image/png" href="/favicon.png?v=2">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+</head>
+
+<body>
+    <!-- Interactive Background Particles Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Neon Background Ambient Glow Orbs -->
+    <div class="bg-glow-orb orb-1"></div>
+    <div class="bg-glow-orb orb-2"></div>
+
+    <!-- Floating Glass Navigation Bar -->
+    <header id="global-header">
+        <div class="nav-container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html" id="logo-link">Adnaan H<span class="logo-dot"></span></a>
+                </div>
+
+                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link" id="nav-projects">Projects</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link active" id="nav-contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Transition Container -->
+    <main id="main-content" class="page-container">
+
+        <!-- CONTACT SECTION -->
+        <section id="contact-section" class="section-padding">
+            <div class="container" style="max-width: 1000px;">
+                <div class="section-title-wrap reveal">
+                    <h2 class="section-title">Let's <span class="text-gradient">Connect</span></h2>
+                    <p class="section-desc">Have an open opportunity, a collaborative proposal, or a technical inquiry? Reach out directly through any of the channels below.</p>
+                </div>
+
+                <div class="contact-centered-grid reveal">
+                    
+                    <!-- Direct Email Card -->
+                    <a href="mailto:adnaanhoosen51@gmail.com" class="glass-card contact-glow-card email-glow" id="contact-email">
+                        <div class="contact-card-icon-wrap">✉️</div>
+                        <div class="contact-card-info">
+                            <h4>Direct Email</h4>
+                            <p>adnaanhoosen51@gmail.com</p>
+                            <span class="contact-action-hint">Send Direct Mail ➔</span>
+                        </div>
+                    </a>
+
+                    <!-- LinkedIn Card -->
+                    <a href="https://www.linkedin.com/in/adnaan-hoosen-4546b4356" target="_blank" class="glass-card contact-glow-card linkedin-glow" id="contact-linkedin">
+                        <div class="contact-card-icon-wrap social-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-card-info">
+                            <h4>LinkedIn</h4>
+                            <p>Adnaan Hoosen</p>
+                            <span class="contact-action-hint">Connect Professional Network ➔</span>
+                        </div>
+                    </a>
+
+                    <!-- GitHub Card -->
+                    <a href="https://github.com/Ryuu-XVII?tab=repositories" target="_blank" class="glass-card contact-glow-card github-glow" id="contact-github">
+                        <div class="contact-card-icon-wrap social-logo">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-card-info">
+                            <h4>GitHub Portfolio</h4>
+                            <p>Ryuu-XVII</p>
+                            <span class="contact-action-hint">Explore Open-Source Repos ➔</span>
+                        </div>
+                    </a>
+
+                    <!-- Phone Card -->
+                    <div class="glass-card contact-glow-card phone-glow" id="contact-phone">
+                        <div class="contact-card-icon-wrap">📞</div>
+                        <div class="contact-card-info">
+                            <h4>Phone Number</h4>
+                            <p>+27 63 519 2284</p>
+                            <span class="contact-action-hint" style="color: var(--text-muted);">Voice & Messaging</span>
+                        </div>
+                    </div>
+
+                    <!-- Location Card -->
+                    <div class="glass-card contact-glow-card location-glow" id="contact-location">
+                        <div class="contact-card-icon-wrap">📍</div>
+                        <div class="contact-card-info">
+                            <h4>Location</h4>
+                            <p>Pretoria, South Africa</p>
+                            <span class="contact-action-hint" style="color: var(--text-muted);">Available for On-Site & Remote</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Adnaan Hoosen.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Drawer Modal (Dynamic details) -->
+    <div id="project-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+        <div class="modal-content-wrap">
+            <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+            <div class="modal-body">
+                <!-- Filled dynamically by JavaScript -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

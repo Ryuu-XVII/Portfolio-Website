@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#07090e">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Adnaan Hoosen | Projects - AI Products & Full-Stack Systems</title>
+    <meta name="description"
+        content="Explore Adnaan Hoosen's engineering projects including local LLM streaming assistants, Stable Diffusion desktop applications, full-stack rental platforms, security scrapers, and interactive visuals.">
+    <link rel="canonical" href="https://adnaan-portfolio-2026.web.app/projects.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Adnaan Hoosen | Projects - AI Products & Full-Stack Systems">
+    <meta property="og:description"
+        content="Explore Adnaan Hoosen's engineering projects including local LLM streaming assistants, Stable Diffusion desktop applications, full-stack rental platforms, security scrapers, and interactive visuals.">
+    <meta property="og:url" content="https://adnaan-portfolio-2026.web.app/projects.html">
+    <meta property="og:image" content="https://adnaan-portfolio-2026.web.app/image/me.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Adnaan Hoosen | Projects - AI Products & Full-Stack Systems">
+    <meta name="twitter:description"
+        content="Explore Adnaan Hoosen's engineering projects including local LLM streaming assistants, Stable Diffusion desktop applications, full-stack rental platforms, security scrapers, and interactive visuals.">
+    <meta name="twitter:image" content="https://adnaan-portfolio-2026.web.app/image/me.jpg">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
+    <link rel="icon" type="image/png" href="/favicon.png?v=2">
+    <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
+</head>
+
+<body>
+    <!-- Interactive Background Particles Canvas -->
+    <canvas id="particle-canvas"></canvas>
+
+    <!-- Neon Background Ambient Glow Orbs -->
+    <div class="bg-glow-orb orb-1"></div>
+    <div class="bg-glow-orb orb-2"></div>
+
+    <!-- Floating Glass Navigation Bar -->
+    <header id="global-header">
+        <div class="nav-container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html" id="logo-link">Adnaan H<span class="logo-dot"></span></a>
+                </div>
+
+                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu">
+                    <li class="nav-item"><a href="index.html" class="nav-link" id="nav-home">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+                    <li class="nav-item"><a href="projects.html" class="nav-link active" id="nav-projects">Projects</a>
+                    </li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Transition Container -->
+    <main id="main-content" class="page-container">
+
+        <!-- PROJECTS PORTFOLIO HERO -->
+        <section id="portfolio-hero" class="section-padding">
+            <div class="container">
+                <div class="section-title-wrap reveal">
+                    <h2 class="section-title">My <span class="text-gradient">Portfolio</span></h2>
+                    <p class="section-desc">A deep dive into advanced software systems I have designed, encompassing
+                        private AI engines, desktop environments, and secure web hubs.</p>
+                </div>
+
+                <!-- Category filtering bar -->
+                <div class="projects-filter-bar reveal delay-100">
+                    <button class="filter-btn active" data-filter="all" aria-pressed="true">All Systems</button>
+                    <button class="filter-btn" data-filter="ai-data" aria-pressed="false">AI & Data</button>
+                    <button class="filter-btn" data-filter="full-stack" aria-pressed="false">Full-Stack</button>
+                    <button class="filter-btn" data-filter="creative-tools" aria-pressed="false">Creative & Tools</button>
+                </div>
+
+                <!-- Grid of 5 CV-listed projects -->
+                <div class="projects-grid">
+
+                    <!-- Mira AI Card -->
+                    <div class="project-card-wrap reveal delay-100" data-category="ai-data">
+                        <div class="glass-card project-card">
+                            <div class="project-card-image-wrap">
+                                <img loading="lazy" src="image/mira_ai_mockup.png" alt="Mira AI visual representation"
+                                    class="project-card-img">
+                                <div class="project-card-image-overlay"></div>
+                                <span class="project-card-category">AI & Data</span>
+                            </div>
+                            <div class="project-card-content">
+                                <h3 class="project-card-title">Mira AI</h3>
+                                <p class="project-card-desc">
+                                    3D React/Three.js AI assistant interface featuring local, fully private LLM
+                                    inference running on-device via node-llama-cpp with streaming token speeds and
+                                    real-time canvas frequency visuals.
+                                </p>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">React</span>
+                                    <span class="tech-badge">Three.js</span>
+                                    <span class="tech-badge">Node.js</span>
+                                    <span class="tech-badge">C++ Local LLM</span>
+                                </div>
+                                <div class="project-btn-wrap">
+                                    <button class="project-btn" data-project="mira-ai" id="project-btn-mira">Explore
+                                        Architecture</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lumina AI Card -->
+                    <div class="project-card-wrap reveal delay-200" data-category="ai-data">
+                        <div class="glass-card project-card">
+                            <div class="project-card-image-wrap">
+                                <img loading="lazy" src="image/lumina_ai_mockup.png" alt="Lumina AI visual representation"
+                                    class="project-card-img">
+                                <div class="project-card-image-overlay"></div>
+                                <span class="project-card-category">AI & Data</span>
+                            </div>
+                            <div class="project-card-content">
+                                <h3 class="project-card-title">Lumina AI</h3>
+                                <p class="project-card-desc">
+                                    Windows desktop Stable Diffusion (SD-Turbo) generation client built using Electron,
+                                    React, and Torch-DirectML for full local hardware acceleration across diverse
+                                    graphics units.
+                                </p>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">Electron</span>
+                                    <span class="tech-badge">React</span>
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">PyTorch DirectML</span>
+                                </div>
+                                <div class="project-btn-wrap">
+                                    <button class="project-btn" data-project="lumina-ai" id="project-btn-lumina">Explore
+                                        Architecture</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RealHome Card -->
+                    <div class="project-card-wrap reveal delay-300" data-category="full-stack">
+                        <div class="glass-card project-card">
+                            <div class="project-card-image-wrap">
+                                <img loading="lazy" src="image/OIP2.jpeg" alt="RealHome Listing Marketplace" class="project-card-img">
+                                <div class="project-card-image-overlay"></div>
+                                <span class="project-card-category">Full-Stack</span>
+                            </div>
+                            <div class="project-card-content">
+                                <h3 class="project-card-title">RealHome</h3>
+                                <p class="project-card-desc">
+                                    Interactive real estate marketplace connecting agents and seekers with secure
+                                    session authentication, listings dashboard engines, advanced SQL searches, and map
+                                    integrations.
+                                </p>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">HTML5</span>
+                                    <span class="tech-badge">CSS3</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                    <span class="tech-badge">PHP & MySQL</span>
+                                </div>
+                                <div class="project-btn-wrap">
+                                    <button class="project-btn" data-project="realhome"
+                                        id="project-btn-realhome">Explore Architecture</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Spectre OSINT Tool -->
+                    <div class="project-card-wrap reveal delay-400" data-category="creative-tools">
+                        <div class="glass-card project-card">
+                            <div class="project-card-image-wrap">
+                                <img loading="lazy" src="image/spectre_osint_mockup.png" alt="Spectre OSINT Tool"
+                                    class="project-card-img" style="object-fit: cover;">
+                                <div class="project-card-image-overlay"></div>
+                                <span class="project-card-category">Creative & Tools</span>
+                            </div>
+                            <div class="project-card-content">
+                                <h3 class="project-card-title">Spectre OSINT Tool</h3>
+                                <p class="project-card-desc">
+                                    A high-performance automated open-source intelligence search tool designed to scan hundreds of public websites and social media platforms to locate and profile individuals using only their name.
+                                </p>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">OSINT Search</span>
+                                    <span class="tech-badge">REST APIs</span>
+                                    <span class="tech-badge">Web Scraping</span>
+                                </div>
+                                <div class="project-btn-wrap">
+                                    <button class="project-btn" data-project="spectre-osint"
+                                        id="project-btn-spectre">Explore Architecture</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- gesture-particle-system -->
+                    <div class="project-card-wrap reveal delay-500" data-category="creative-tools">
+                        <div class="glass-card project-card">
+                            <div class="project-card-image-wrap">
+                                <img loading="lazy" src="image/gesture_particles_mockup.png" alt="Gesture Particle Visualizer"
+                                    class="project-card-img" style="object-fit: cover;">
+                                <div class="project-card-image-overlay"></div>
+                                <span class="project-card-category">Creative & Tools</span>
+                            </div>
+                            <div class="project-card-content">
+                                <h3 class="project-card-title">Gesture Particle Visuals</h3>
+                                <p class="project-card-desc">
+                                    Interactive creative programming application rendering thousands of high-performance
+                                    glowing vectors flowing and warping reacting dynamically to hand gesture trackers
+                                    and mouse sweeps.
+                                </p>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">HTML5 Canvas</span>
+                                    <span class="tech-badge">JS ES6</span>
+                                    <span class="tech-badge">Vector Math</span>
+                                    <span class="tech-badge">GPU Rendering</span>
+                                </div>
+                                <div class="project-btn-wrap">
+                                    <button class="project-btn" data-project="gesture-particle-system"
+                                        id="project-btn-gesture">Explore Architecture</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Studio Card -->
+                    <div class="project-card-wrap reveal delay-100" data-category="ai-data">
+                        <div class="glass-card project-card">
+                            <div class="project-card-image-wrap">
+                                <img loading="lazy" src="image/video_studio_mockup.png" alt="Video Studio Synthesized Video Engine"
+                                    class="project-card-img" style="object-fit: cover;">
+                                <div class="project-card-image-overlay"></div>
+                                <span class="project-card-category">AI & Data</span>
+                            </div>
+                            <div class="project-card-content">
+                                <h3 class="project-card-title">Video Studio</h3>
+                                <p class="project-card-desc">
+                                    Native Windows desktop application for synthesized video rendering, built with Python, PyTorch, and PyQt6, featuring CUDA acceleration and active memory scaling.
+                                </p>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">PyTorch</span>
+                                    <span class="tech-badge">PyQt6</span>
+                                    <span class="tech-badge">CUDA</span>
+                                </div>
+                                <div class="project-btn-wrap">
+                                    <button class="project-btn" data-project="video-studio"
+                                        id="project-btn-video-studio">Explore Architecture</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- NexusSearch Card -->
+                    <div class="project-card-wrap reveal delay-200" data-category="ai-data">
+                        <div class="glass-card project-card">
+                            <div class="project-card-image-wrap">
+                                <img loading="lazy" src="image/nexus_search_mockup.png" alt="NexusSearch AI Search Engine"
+                                    class="project-card-img" style="object-fit: cover;">
+                                <div class="project-card-image-overlay"></div>
+                                <span class="project-card-category">AI & Data</span>
+                            </div>
+                            <div class="project-card-content">
+                                <h3 class="project-card-title">NexusSearch</h3>
+                                <p class="project-card-desc">
+                                    An autonomous search engine leveraging OpenVINO to execute semantic embeddings on Intel NPU, utilizing Qdrant vector retrieval pipelines.
+                                </p>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">FastAPI</span>
+                                    <span class="tech-badge">OpenVINO</span>
+                                    <span class="tech-badge">Qdrant</span>
+                                    <span class="tech-badge">PostgreSQL</span>
+                                </div>
+                                <div class="project-btn-wrap">
+                                    <button class="project-btn" data-project="nexus-search"
+                                        id="project-btn-nexus-search">Explore Architecture</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- The System Card -->
+                    <div class="project-card-wrap reveal delay-300" data-category="full-stack">
+                        <div class="glass-card project-card">
+                            <div class="project-card-image-wrap">
+                                <img loading="lazy" src="image/the_system_hud.png" alt="The System Mobile Workout Tracker"
+                                    class="project-card-img" style="object-fit: cover;">
+                                <div class="project-card-image-overlay"></div>
+                                <span class="project-card-category">Full-Stack</span>
+                            </div>
+                            <div class="project-card-content">
+                                <h3 class="project-card-title">The System</h3>
+                                <p class="project-card-desc">
+                                    Gamified calisthenics tracking and progression app modeled after the Solo Leveling manhwa, featuring custom player status HUDs, daily quests, and desert survival penalties.
+                                </p>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">Flutter & Dart</span>
+                                    <span class="tech-badge">Firebase</span>
+                                    <span class="tech-badge">Firestore</span>
+                                    <span class="tech-badge">Manhwa HUD</span>
+                                </div>
+                                <div class="project-btn-wrap">
+                                    <button class="project-btn" data-project="the-system"
+                                        id="project-btn-the-system">Explore Architecture</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Real-Time Collaborative Board Card -->
+                    <div class="project-card-wrap reveal delay-400" data-category="full-stack">
+                        <div class="glass-card project-card">
+                            <div class="project-card-image-wrap">
+                                <img loading="lazy" src="image/collab_board_mockup.png" alt="Real-Time Collaborative Board"
+                                    class="project-card-img" style="object-fit: cover;">
+                                <div class="project-card-image-overlay"></div>
+                                <span class="project-card-category">Full-Stack</span>
+                            </div>
+                            <div class="project-card-content">
+                                <h3 class="project-card-title">Real-Time Collaborative Board</h3>
+                                <p class="project-card-desc">
+                                    A dynamic multiplayer digital board environment enabling concurrent users to draw vectors, add sticky notes, and manage canvas state with millisecond latency synchronization.
+                                </p>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">React & JS</span>
+                                    <span class="tech-badge">Socket.io</span>
+                                    <span class="tech-badge">Node.js</span>
+                                    <span class="tech-badge">HTML5 Canvas</span>
+                                </div>
+                                <div class="project-btn-wrap">
+                                    <button class="project-btn" data-project="collaborative-board"
+                                        id="project-btn-collaborative-board">Explore Architecture</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Micro-Merchant POS System Card -->
+                    <div class="project-card-wrap reveal delay-500" data-category="full-stack">
+                        <div class="glass-card project-card">
+                            <div class="project-card-image-wrap">
+                                <img loading="lazy" src="image/pos_mockup.png" alt="Micro-Merchant POS System"
+                                    class="project-card-img" style="object-fit: cover;">
+                                <div class="project-card-image-overlay"></div>
+                                <span class="project-card-category">Full-Stack</span>
+                            </div>
+                            <div class="project-card-content">
+                                <h3 class="project-card-title">Micro-Merchant POS System</h3>
+                                <p class="project-card-desc">
+                                    A lightweight, offline-first cross-platform mobile point-of-sale system designed for micro-merchants to perform checkout operations, manage catalog items, track sales metrics, and print invoices.
+                                </p>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">Flutter & Dart</span>
+                                    <span class="tech-badge">SQLite DB</span>
+                                    <span class="tech-badge">State Management</span>
+                                    <span class="tech-badge">Receipt Generator</span>
+                                </div>
+                                <div class="project-btn-wrap">
+                                    <button class="project-btn" data-project="micro-merchant-pos"
+                                        id="project-btn-micro-merchant-pos">Explore Architecture</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MIRA Core Card -->
+                    <div class="project-card-wrap reveal delay-400" data-category="creative-tools">
+                        <div class="glass-card project-card">
+                            <div class="project-card-image-wrap">
+                                <img loading="lazy" src="image/mira_core_console.png" alt="MIRA Core Systems Command Bridge"
+                                    class="project-card-img" style="object-fit: cover;">
+                                <div class="project-card-image-overlay"></div>
+                                <span class="project-card-category">Creative & Tools</span>
+                            </div>
+                            <div class="project-card-content">
+                                <h3 class="project-card-title">MIRA Core</h3>
+                                <p class="project-card-desc">
+                                    An advanced native command interface and telemetry bridge managing audio DSP capturing pipelines, hardware vaults, and Firestore history syncing.
+                                </p>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">Flutter & Dart</span>
+                                    <span class="tech-badge">Audio DSP</span>
+                                    <span class="tech-badge">DPAPI Vault</span>
+                                    <span class="tech-badge">Firestore</span>
+                                </div>
+                                <div class="project-btn-wrap">
+                                    <button class="project-btn" data-project="mira-core"
+                                        id="project-btn-mira-core">Explore Architecture</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Procedural Roguelike Map Generator Card -->
+                    <div class="project-card-wrap reveal delay-500" data-category="creative-tools">
+                        <div class="glass-card project-card">
+                            <div class="project-card-image-wrap">
+                                <img loading="lazy" src="image/procedural_map_mockup.png" alt="Procedural Roguelike Map Generator"
+                                    class="project-card-img" style="object-fit: cover;">
+                                <div class="project-card-image-overlay"></div>
+                                <span class="project-card-category">Creative & Tools</span>
+                            </div>
+                            <div class="project-card-content">
+                                <h3 class="project-card-title">Procedural Roguelike Map Generator</h3>
+                                <p class="project-card-desc">
+                                    An interactive procedural generation suite executing Binary Space Partitioning (BSP) trees, cellular automata, and drunkard's walk pathing to synthesize complex, natural 2D roguelike grids.
+                                </p>
+                                <div class="project-tech-badges">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">BSP Trees</span>
+                                    <span class="tech-badge">Cellular Automata</span>
+                                    <span class="tech-badge">Vector Pathing</span>
+                                </div>
+                                <div class="project-btn-wrap">
+                                    <button class="project-btn" data-project="roguelike-map-generator"
+                                        id="project-btn-roguelike-map-generator">Explore Architecture</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Global Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Adnaan Hoosen.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Drawer Modal (Dynamic details) -->
+    <div id="project-modal" class="modal-overlay" aria-hidden="true" role="dialog">
+        <div class="modal-content-wrap">
+            <button class="modal-close-btn" aria-label="Close modal">&times;</button>
+            <div class="modal-body">
+                <!-- Filled dynamically by JavaScript -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
