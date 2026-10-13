@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="theme-color" content="#070b14">
     <link rel="manifest" href="/manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,8 +27,9 @@
     <meta name="twitter:image" content="https://adnaan-portfolio-2026.web.app/image/me.jpg">
     <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2">
     <link rel="icon" type="image/png" href="/favicon.png?v=2">
-    <link rel="stylesheet" href="/style.css">
-    <script src="/script.js" defer></script>
+    <link rel="stylesheet" href="/style.css?v=20261013b">
+    <link rel="stylesheet" href="/mobile.css?v=20261013b" media="(max-width: 768px)">
+    <script src="/script.js?v=20261013b" defer></script>
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -85,6 +86,26 @@
         </div>
     </header>
 
+    <!-- Mobile bottom tab bar (shown on phones only) -->
+    <nav class="mobile-tabbar" aria-label="Mobile navigation">
+        <a href="index.html" class="tab-link active">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11 12 4l9 7"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>
+            <span>Home</span>
+        </a>
+        <a href="about.html" class="tab-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+            <span>About</span>
+        </a>
+        <a href="projects.html" class="tab-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+            <span>Projects</span>
+        </a>
+        <a href="contact.html" class="tab-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            <span>Contact</span>
+        </a>
+    </nav>
+
     <!-- Main Transition Container for Dynamic Swapping -->
     <main id="main-content" class="page-container">
 
@@ -95,7 +116,7 @@
 
                     <div class="hero-text reveal-left">
                         <span class="hero-greeting">Software Engineer</span>
-                        <h1 class="hero-name">I build software<br>that feels like <span class="text-gradient">the future.</span></h1>
+                        <h1 class="hero-name">I build software <br>that feels like <span class="text-gradient">the future.</span></h1>
                         <div class="hero-subtitle">
                             <span class="typewriter-text"></span><span class="typewriter-cursor">|</span>
                         </div>
@@ -160,7 +181,7 @@
                     <div class="section-head-row">
                         <div>
                             <span class="eyebrow">Featured Projects</span>
-                            <h2 class="section-title">Engineering impact<br>through <span class="text-gradient">meaningful</span> software.</h2>
+                            <h2 class="section-title">Engineering impact <br>through <span class="text-gradient">meaningful</span> software.</h2>
                         </div>
                         <a href="projects.html" class="link-arrow">View all projects
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
@@ -296,7 +317,7 @@
                 <div class="band process-band reveal">
                     <div>
                         <span class="eyebrow">My Process</span>
-                        <h2 class="section-title" style="font-size: clamp(1.7rem, 3vw, 2.2rem); margin-bottom: 0;">A thoughtful approach<br>to building software.</h2>
+                        <h2 class="section-title" style="font-size: clamp(1.7rem, 3vw, 2.2rem); margin-bottom: 0;">A thoughtful approach <br>to building software.</h2>
 
                         <div class="process-steps">
                             <div class="process-step">
@@ -338,7 +359,7 @@
                     <div class="section-head-row">
                         <div>
                             <span class="eyebrow">Experience</span>
-                            <h2 class="section-title">Teams I've had the<br>pleasure to build with.</h2>
+                            <h2 class="section-title">Teams I've had the <br>pleasure to build with.</h2>
                         </div>
                         <a href="about.html" class="link-arrow">View full journey
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
@@ -385,7 +406,7 @@
                     <span class="cta-side-label" aria-hidden="true">Let's create together</span>
                     <div class="cta-copy">
                         <span class="eyebrow">Have a project in mind?</span>
-                        <h2>Let's build something<br><span class="text-gradient">meaningful</span> together.</h2>
+                        <h2>Let's build something <br><span class="text-gradient">meaningful</span> together.</h2>
                         <ul class="cta-meta">
                             <li>
                                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
@@ -426,7 +447,7 @@
                         </svg>
                         <span class="logo-text"><span class="logo-name">ADNAAN</span><span class="logo-role">Software Engineer</span></span>
                     </a>
-                    <p class="footer-tagline">Engineering the future,<br>one commit at a time.</p>
+                    <p class="footer-tagline">Engineering the future, <br>one commit at a time.</p>
                 </div>
                 <div>
                     <span class="footer-heading">Explore</span>

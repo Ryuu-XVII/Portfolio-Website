@@ -316,7 +316,7 @@ function loadPageContent(url, pushState = true) {
 }
 
 function updateNavActiveLink(url) {
-  const links = document.querySelectorAll('.nav-link');
+  const links = document.querySelectorAll('.nav-link, .tab-link');
   // Match baseline filename
   const filename = url.split('/').pop() || 'index.html';
 
