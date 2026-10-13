@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#07090e">
+    <meta name="theme-color" content="#0c0716">
     <link rel="manifest" href="/manifest.json">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@1,400;1,500&display=swap"
         rel="stylesheet">
     <title>Adnaan Hoosen | Portfolio - AI & Full-Stack Software Engineer</title>
     <meta name="description"
@@ -53,26 +53,34 @@
     <div class="bg-glow-orb orb-1"></div>
     <div class="bg-glow-orb orb-2"></div>
 
-    <!-- Floating Glass Navigation Bar -->
+    <!-- Glass Navigation Bar -->
     <header id="global-header">
         <div class="nav-container">
             <nav class="navbar">
                 <div class="logo">
-                    <a href="index.html" id="logo-link">Adnaan H<span class="logo-dot"></span></a>
+                    <a href="index.html" id="logo-link" aria-label="Adnaan Hoosen, home">
+                        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+                            <path d="M6 37V18a14 14 0 0 1 28 0v19Z" />
+                            <path d="M14 37V22l6-8 6 8v15M16.5 28h7" />
+                        </svg>
+                        <span class="logo-text"><span class="logo-name">ADNAAN</span><span class="logo-role">Software Engineer</span></span>
+                    </a>
                 </div>
 
-                <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-
-                <ul class="nav-menu">
-                    <li class="nav-item"><a href="index.html" class="nav-link active" id="nav-home">Home</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link" id="nav-about">About</a></li>
-                    <li class="nav-item"><a href="projects.html" class="nav-link" id="nav-projects">Projects</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
-                </ul>
+                <div class="nav-right">
+                    <ul class="nav-menu">
+                        <li class="nav-item"><a href="index.html" class="nav-link active" id="nav-home">Home</a></li>
+                        <li class="nav-item"><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+                        <li class="nav-item"><a href="projects.html" class="nav-link" id="nav-projects">Projects</a></li>
+                        <li class="nav-item"><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+                    </ul>
+                    <a href="contact.html" class="nav-cta" id="nav-cta">Let's Connect</a>
+                    <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
             </nav>
         </div>
     </header>
@@ -80,167 +88,326 @@
     <!-- Main Transition Container for Dynamic Swapping -->
     <main id="main-content" class="page-container">
 
-        <!-- HERO SECTION -->
-        <section id="hero" class="hero-content section-padding">
+        <!-- HERO -->
+        <section id="hero" class="hero-content">
             <div class="container">
                 <div class="hero-grid">
 
                     <div class="hero-text reveal-left">
-                        <span class="hero-greeting">Welcome to my space</span>
-                        <h1 class="hero-name">Hi, I'm <span class="text-gradient">Adnaan Hoosen</span></h1>
+                        <span class="hero-greeting">Software Engineer</span>
+                        <h1 class="hero-name">I build software<br>that feels like <span class="text-gradient">the future.</span></h1>
                         <div class="hero-subtitle">
                             <span class="typewriter-text"></span><span class="typewriter-cursor">|</span>
                         </div>
                         <p class="hero-desc">
-                            Software Engineering graduate with hands-on experience building local, on-device AI
-                            applications, modern 3D Three.js assistants, and secure full-stack database architectures.
+                            Hi, I'm Adnaan Hoosen. I build private, on-device AI applications, 3D web experiences and
+                            secure full-stack systems, turning complex engineering into software people enjoy using.
                         </p>
                         <div class="hero-actions">
-                            <a href="projects.html" class="btn btn-primary" id="hero-btn-projects">Explore Projects</a>
-                            <a href="contact.html" class="btn btn-secondary" id="hero-btn-contact">Get In Touch</a>
+                            <a href="projects.html" class="btn btn-primary" id="hero-btn-projects">View My Work
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                            </a>
+                            <a href="about.html" class="btn btn-secondary" id="hero-btn-about">About Me
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>
+                            </a>
+                        </div>
+                        <div class="availability">
+                            <span class="availability-dot" aria-hidden="true"></span>
+                            <div>
+                                <strong>Available for opportunities</strong>
+                                <span>On-site in Pretoria or remote. Let's build something exceptional.</span>
+                            </div>
                         </div>
                     </div>
 
                     <div class="hero-visual reveal-right">
-                        <div class="hero-image-frame">
-                            <!-- Premium dynamic placeholder avatar generated internally representing high-tech developer -->
-                            <img src="image/logo.jpg" alt="Adnaan Hoosen" class="hero-image">
-                        </div>
-
-                        <!-- Floating Glass Certifications badges showing direct CV accomplishments -->
-                        <div class="hero-floating-badge badge-azure reveal delay-200">
-                            <img src="image/A.png" alt="Azure Logo">
-                            <div class="badge-info">
-                                <p class="badge-text-primary">Azure Certified</p>
-                                <p class="badge-text-secondary">Data Fundamentals</p>
+                        <div class="hero-orb">
+                            <div class="hero-image-frame">
+                                <img src="image/logo.jpg" alt="Adnaan Hoosen avatar" class="hero-image">
                             </div>
                         </div>
 
-                        <div class="hero-floating-badge badge-dev reveal delay-400">
-                            <img src="image/J.png" alt="JS Logo">
-                            <div class="badge-info">
-                                <p class="badge-text-primary">Certiport JS/HTML</p>
-                                <p class="badge-text-secondary">IT Specialist</p>
-                            </div>
+                        <div class="hero-floating-badge badge-top">
+                            <span class="badge-label">Building</span>
+                            <p class="badge-value">with local AI and clean, reliable code.</p>
+                            <svg class="badge-heart" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.5-9.4C1.2 8.3 3.4 5 6.8 5c2 0 3.4 1.1 5.2 3 1.8-1.9 3.2-3 5.2-3 3.4 0 5.6 3.3 4.3 6.6C19.5 16.4 12 21 12 21z"/></svg>
                         </div>
 
+                        <div class="hero-floating-badge badge-left">
+                            <span class="badge-label">Experience</span>
+                            <p class="badge-value"><strong>3 internships</strong>12+ engineering projects shipped</p>
+                        </div>
+
+                        <div class="hero-floating-badge badge-right">
+                            <span class="badge-label">Focus Areas</span>
+                            <ul class="badge-list">
+                                <li>On-device AI &amp; LLMs</li>
+                                <li>Full-stack web apps</li>
+                                <li>Flutter mobile &amp; desktop</li>
+                                <li>3D &amp; creative coding</li>
+                            </ul>
+                        </div>
                     </div>
 
                 </div>
-
-                <!-- Quick stats grid summarizing resume details -->
-                <div class="stats-grid reveal delay-300">
-                    <div class="glass-card stat-card">
-                        <div class="stat-number text-gradient">12+</div>
-                        <div class="stat-label">Engineering Projects</div>
-                    </div>
-                    <div class="glass-card stat-card">
-                        <div class="stat-number text-gradient">3</div>
-                        <div class="stat-label">Industry Certifications</div>
-                    </div>
-                    <div class="glass-card stat-card">
-                        <div class="stat-number text-gradient">3</div>
-                        <div class="stat-label">Internships</div>
-                    </div>
-                </div>
-
             </div>
         </section>
 
-        <!-- HOMEPAGE HIGHLIGHTS -->
-        <section id="highlights" class="section-padding" style="padding-top: 2rem;">
+        <!-- FEATURED PROJECTS -->
+        <section id="highlights" class="section-padding" style="padding-top: 1rem;">
             <div class="container">
-                <div class="section-title-wrap reveal">
-                    <h2 class="section-title">Featured <span class="text-gradient">Creations</span></h2>
-                    <p class="section-desc">A brief showcase of advanced applications I have built using local neural
-                        networks, full-stack tools, and 3D web spaces.</p>
+                <div class="band reveal">
+                    <div class="section-head-row">
+                        <div>
+                            <span class="eyebrow">Featured Projects</span>
+                            <h2 class="section-title">Engineering impact<br>through <span class="text-gradient">meaningful</span> software.</h2>
+                        </div>
+                        <a href="projects.html" class="link-arrow">View all projects
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+                        </a>
+                    </div>
+
+                    <div class="projects-grid">
+
+                        <div class="project-card-wrap reveal delay-100">
+                            <div class="glass-card project-card">
+                                <div class="project-card-image-wrap">
+                                    <img loading="lazy" src="image/mira_ai_mockup.png" alt="Mira AI 3D assistant interface" class="project-card-img">
+                                    <div class="project-card-image-overlay"></div>
+                                    <span class="project-card-num">01</span>
+                                </div>
+                                <div class="project-card-content">
+                                    <h3 class="project-card-title">Mira AI</h3>
+                                    <p class="project-card-subtitle">3D assistant with private on-device LLM</p>
+                                    <div class="project-card-foot">
+                                        <div class="project-tech-badges">
+                                            <span class="tech-badge">React</span>
+                                            <span class="tech-badge">Three.js</span>
+                                            <span class="tech-badge">Local LLM</span>
+                                        </div>
+                                        <button class="project-btn icon-only" data-project="mira-ai" id="highlight-btn-mira" aria-label="Explore Mira AI architecture">Explore</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card-wrap reveal delay-200">
+                            <div class="glass-card project-card">
+                                <div class="project-card-image-wrap">
+                                    <img loading="lazy" src="image/lumina_ai_mockup.png" alt="Lumina AI image generator" class="project-card-img">
+                                    <div class="project-card-image-overlay"></div>
+                                    <span class="project-card-num">02</span>
+                                </div>
+                                <div class="project-card-content">
+                                    <h3 class="project-card-title">Lumina AI</h3>
+                                    <p class="project-card-subtitle">Local Stable Diffusion desktop studio</p>
+                                    <div class="project-card-foot">
+                                        <div class="project-tech-badges">
+                                            <span class="tech-badge">Electron</span>
+                                            <span class="tech-badge">Python</span>
+                                            <span class="tech-badge">DirectML</span>
+                                        </div>
+                                        <button class="project-btn icon-only" data-project="lumina-ai" id="highlight-btn-lumina" aria-label="Explore Lumina AI architecture">Explore</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="project-card-wrap reveal delay-300">
+                            <div class="glass-card project-card">
+                                <div class="project-card-image-wrap">
+                                    <img loading="lazy" src="image/nexus_search_mockup.png" alt="NexusSearch NPU-accelerated search engine" class="project-card-img">
+                                    <div class="project-card-image-overlay"></div>
+                                    <span class="project-card-num">03</span>
+                                </div>
+                                <div class="project-card-content">
+                                    <h3 class="project-card-title">NexusSearch</h3>
+                                    <p class="project-card-subtitle">NPU-accelerated semantic search engine</p>
+                                    <div class="project-card-foot">
+                                        <div class="project-tech-badges">
+                                            <span class="tech-badge">FastAPI</span>
+                                            <span class="tech-badge">OpenVINO</span>
+                                            <span class="tech-badge">Qdrant</span>
+                                        </div>
+                                        <button class="project-btn icon-only" data-project="nexus-search" id="highlight-btn-nexus" aria-label="Explore NexusSearch architecture">Explore</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
+            </div>
+        </section>
 
-                <div class="projects-grid">
+        <!-- SERVICES + TOOLS -->
+        <section id="services" class="section-padding" style="padding-top: 0;">
+            <div class="container">
+                <div class="band services-band reveal">
+                    <div class="services-intro">
+                        <div>
+                            <span class="eyebrow">What I Do</span>
+                            <h2>End-to-end software engineering tailored to <span class="text-gradient">real</span> problems.</h2>
+                        </div>
+                        <div class="services-planet" aria-hidden="true"></div>
+                    </div>
 
-                    <!-- Mira AI Card -->
-                    <div class="project-card-wrap reveal delay-100">
-                        <div class="glass-card project-card">
-                            <div class="project-card-image-wrap">
-                                <img loading="lazy" src="image/mira_ai_mockup.png" alt="Mira AI 3D assistant representation"
-                                    class="project-card-img">
-                                <div class="project-card-image-overlay"></div>
-                                <span class="project-card-category">AI & Data</span>
-                            </div>
-                            <div class="project-card-content">
-                                <h3 class="project-card-title">Mira AI</h3>
-                                <p class="project-card-desc">3D React/Three.js AI assistant UI featuring local, fully
-                                    private LLM inference running on-device via node-llama-cpp with streaming token
-                                    speeds.</p>
-                                <div class="project-tech-badges">
-                                    <span class="tech-badge">React</span>
-                                    <span class="tech-badge">Three.js</span>
-                                    <span class="tech-badge">Node.js</span>
-                                    <span class="tech-badge">C++ Local LLM</span>
-                                </div>
-                                <div class="project-btn-wrap">
-                                    <button class="project-btn" data-project="mira-ai" id="highlight-btn-mira">Explore
-                                        Architecture</button>
-                                </div>
-                            </div>
+                    <div class="services-list">
+                        <div class="service-item">
+                            <div class="icon-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v4M15 2v4M9 18v4M15 18v4M2 9h4M2 15h4M18 9h4M18 15h4"/></svg></div>
+                            <h3>AI Engineering</h3>
+                            <p>Private on-device LLMs, RAG pipelines and diffusion models running on your own hardware.</p>
+                        </div>
+                        <div class="service-item">
+                            <div class="icon-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 22h8M12 18v4M7 9l-2 2 2 2M17 9l2 2-2 2"/></svg></div>
+                            <h3>Full-Stack Web</h3>
+                            <p>Responsive front-ends backed by secure APIs, auth and well-designed databases.</p>
+                        </div>
+                        <div class="service-item">
+                            <div class="icon-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></div>
+                            <h3>Mobile &amp; Desktop</h3>
+                            <p>Cross-platform Flutter, Electron and PyQt apps that work offline and feel native.</p>
+                        </div>
+                        <div class="service-item">
+                            <div class="icon-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></div>
+                            <h3>Systems &amp; Tools</h3>
+                            <p>Automation, data pipelines and developer tooling built for speed and reliability.</p>
                         </div>
                     </div>
 
-                    <!-- Lumina AI Card -->
-                    <div class="project-card-wrap reveal delay-200">
-                        <div class="glass-card project-card">
-                            <div class="project-card-image-wrap">
-                                <img loading="lazy" src="image/lumina_ai_mockup.png" alt="Lumina AI generator representation"
-                                    class="project-card-img">
-                                <div class="project-card-image-overlay"></div>
-                                <span class="project-card-category">AI & Data</span>
+                    <div>
+                        <span class="tools-title">Tools I Use</span>
+                        <div class="tools-grid">
+                            <div class="tool-tile"><span><img loading="lazy" src="image/tools/python.png" alt=""></span><span>Python</span></div>
+                            <div class="tool-tile"><span><img loading="lazy" src="image/tools/javascript.png" alt=""></span><span>JavaScript</span></div>
+                            <div class="tool-tile"><span><img loading="lazy" src="image/tools/html5.png" alt=""></span><span>HTML5</span></div>
+                            <div class="tool-tile"><span><img loading="lazy" src="image/tools/css3.png" alt=""></span><span>CSS3</span></div>
+                            <div class="tool-tile"><span><img loading="lazy" src="image/tools/azure.png" alt=""></span><span>Azure</span></div>
+                            <div class="tool-tile"><span><img loading="lazy" src="image/tools/git.png" alt=""></span><span>Git</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS -->
+        <section id="process" class="section-padding" style="padding-top: 1rem;">
+            <div class="container">
+                <div class="band process-band reveal">
+                    <div>
+                        <span class="eyebrow">My Process</span>
+                        <h2 class="section-title" style="font-size: clamp(1.7rem, 3vw, 2.2rem); margin-bottom: 0;">A thoughtful approach<br>to building software.</h2>
+
+                        <div class="process-steps">
+                            <div class="process-step">
+                                <div class="icon-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg></div>
+                                <h3><span>01</span>Understand</h3>
+                                <p>Learn the users, the constraints and the problem worth solving.</p>
                             </div>
-                            <div class="project-card-content">
-                                <h3 class="project-card-title">Lumina AI</h3>
-                                <p class="project-card-desc">Windows desktop Stable Diffusion (SD-Turbo) generation
-                                    client built using Electron, React, and Torch-DirectML for full local hardware
-                                    acceleration.</p>
-                                <div class="project-tech-badges">
-                                    <span class="tech-badge">Electron</span>
-                                    <span class="tech-badge">React</span>
-                                    <span class="tech-badge">Python</span>
-                                    <span class="tech-badge">PyTorch DirectML</span>
-                                </div>
-                                <div class="project-btn-wrap">
-                                    <button class="project-btn" data-project="lumina-ai"
-                                        id="highlight-btn-lumina">Explore Architecture</button>
-                                </div>
+                            <div class="process-step">
+                                <div class="icon-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h10"/></svg></div>
+                                <h3><span>02</span>Plan</h3>
+                                <p>Shape the architecture, data model and API contracts up front.</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="icon-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5M14 4l-4 16"/></svg></div>
+                                <h3><span>03</span>Build</h3>
+                                <p>Write clean, maintainable code in small, reviewable steps.</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="icon-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 3h6M10 3v6l-5 9a2 2 0 0 0 1.7 3h10.6a2 2 0 0 0 1.7-3l-5-9V3"/></svg></div>
+                                <h3><span>04</span>Test</h3>
+                                <p>Automated tests and evaluations to catch regressions early.</p>
+                            </div>
+                            <div class="process-step">
+                                <div class="icon-ring"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2M14 4c3-1 6-1 6-1s0 3-1 6l-7 7-5-5zM9 11l-3 0-2 2 4 1M13 15v3l-2 2-1-4"/></svg></div>
+                                <h3><span>05</span>Ship &amp; Refine</h3>
+                                <p>Deploy, measure and iterate based on real-world use.</p>
                             </div>
                         </div>
                     </div>
+                    <div class="archway" aria-hidden="true"></div>
+                </div>
+            </div>
+        </section>
 
-                    <!-- RealHome Card -->
-                    <div class="project-card-wrap reveal delay-300">
-                        <div class="glass-card project-card">
-                            <div class="project-card-image-wrap">
-                                <img loading="lazy" src="image/OIP2.jpeg" alt="RealHome Real Estate listing application"
-                                    class="project-card-img">
-                                <div class="project-card-image-overlay"></div>
-                                <span class="project-card-category">Full-Stack</span>
+        <!-- EXPERIENCE HIGHLIGHTS -->
+        <section id="experience" class="section-padding" style="padding-top: 1rem;">
+            <div class="container">
+                <div class="band reveal">
+                    <div class="section-head-row">
+                        <div>
+                            <span class="eyebrow">Experience</span>
+                            <h2 class="section-title">Teams I've had the<br>pleasure to build with.</h2>
+                        </div>
+                        <a href="about.html" class="link-arrow">View full journey
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M14 6l6 6-6 6"/></svg>
+                        </a>
+                    </div>
+
+                    <div class="quotes-grid">
+                        <div class="glass-card quote-card reveal delay-100">
+                            <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+                            <p>Built RAG retrieval flows and agentic tool-calling workflows with LangChain, MCP and n8n, and
+                                developed evaluation harnesses for LLM-powered backends.</p>
+                            <div class="quote-author">
+                                <span class="quote-avatar" aria-hidden="true">FR</span>
+                                <div><strong>FlyRank AI</strong><span>Backend AI Engineer Intern</span></div>
                             </div>
-                            <div class="project-card-content">
-                                <h3 class="project-card-title">RealHome</h3>
-                                <p class="project-card-desc">Interactive real estate marketplace connecting agents and
-                                    seekers with secure authentication, listings dashboards, and API map rendering.</p>
-                                <div class="project-tech-badges">
-                                    <span class="tech-badge">HTML5</span>
-                                    <span class="tech-badge">CSS3</span>
-                                    <span class="tech-badge">JavaScript</span>
-                                    <span class="tech-badge">PHP & MySQL</span>
-                                </div>
-                                <div class="project-btn-wrap">
-                                    <button class="project-btn" data-project="realhome"
-                                        id="highlight-btn-realhome">Explore Architecture</button>
-                                </div>
+                        </div>
+                        <div class="glass-card quote-card reveal delay-200">
+                            <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+                            <p>Shipped front-end and back-end features across two production projects in React and
+                                TypeScript, backed by automated tests and Agile delivery.</p>
+                            <div class="quote-author">
+                                <span class="quote-avatar" aria-hidden="true">FG</span>
+                                <div><strong>FOCI Group</strong><span>Software Development Intern</span></div>
+                            </div>
+                        </div>
+                        <div class="glass-card quote-card reveal delay-300">
+                            <div class="quote-mark" aria-hidden="true">&ldquo;</div>
+                            <p>Optimised SQL query routines and CSS rendering times by over 20% while maintaining
+                                responsive full-stack web applications.</p>
+                            <div class="quote-author">
+                                <span class="quote-avatar" aria-hidden="true">CI</span>
+                                <div><strong>Coast IT</strong><span>Software Development Intern</span></div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- CONTACT CTA -->
+        <section id="cta" class="section-padding" style="padding-top: 1rem;">
+            <div class="container">
+                <div class="band cta-band reveal">
+                    <span class="cta-side-label" aria-hidden="true">Let's create together</span>
+                    <div class="cta-copy">
+                        <span class="eyebrow">Have a project in mind?</span>
+                        <h2>Let's build something<br><span class="text-gradient">meaningful</span> together.</h2>
+                        <ul class="cta-meta">
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                                <a href="mailto:adnaanhoosen51@gmail.com">adnaanhoosen51@gmail.com</a>
+                            </li>
+                            <li>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 22s7-6.2 7-12a7 7 0 0 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+                                Based in Pretoria, South Africa
+                            </li>
+                        </ul>
+                    </div>
+                    <form class="cta-form" id="cta-form" novalidate>
+                        <label for="cta-name">Your name</label>
+                        <input id="cta-name" name="name" type="text" placeholder="Your Name" autocomplete="name" required>
+                        <label for="cta-email">Your email</label>
+                        <input id="cta-email" name="email" type="email" placeholder="Your Email" autocomplete="email" required>
+                        <label for="cta-message">Your message</label>
+                        <textarea id="cta-message" name="message" placeholder="Tell me about your project" required></textarea>
+                        <button type="submit" class="btn btn-primary">Send Message
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9 12h6M13 9l3 3-3 3"/></svg>
+                        </button>
+                    </form>
                 </div>
             </div>
         </section>
@@ -250,7 +417,45 @@
     <!-- Global Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Adnaan Hoosen.</p>
+            <div class="footer-grid">
+                <div>
+                    <a href="index.html" class="logo" style="display:flex;align-items:center;gap:0.9rem;">
+                        <svg class="logo-mark" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true">
+                            <path d="M6 37V18a14 14 0 0 1 28 0v19Z" />
+                            <path d="M14 37V22l6-8 6 8v15M16.5 28h7" />
+                        </svg>
+                        <span class="logo-text"><span class="logo-name">ADNAAN</span><span class="logo-role">Software Engineer</span></span>
+                    </a>
+                    <p class="footer-tagline">Engineering the future,<br>one commit at a time.</p>
+                </div>
+                <div>
+                    <span class="footer-heading">Explore</span>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <span class="footer-heading">Let's Connect</span>
+                    <div class="footer-socials">
+                        <a href="https://www.linkedin.com/in/adnaan-hoosen-4546b4356" target="_blank" rel="noopener" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.05c.53-1 1.84-2.05 3.78-2.05 4.04 0 4.79 2.66 4.79 6.12V21h-4v-4.98c0-1.19-.02-2.72-1.66-2.72-1.66 0-1.91 1.3-1.91 2.63V21h-4z"/></svg>
+                        </a>
+                        <a href="https://github.com/Ryuu-XVII" target="_blank" rel="noopener" aria-label="GitHub">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.8 1.19 1.83 1.19 3.09 0 4.42-2.7 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>
+                        </a>
+                        <a href="mailto:adnaanhoosen51@gmail.com" aria-label="Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Adnaan Hoosen. All rights reserved.</p>
+                <p>Pretoria, South Africa</p>
+            </div>
         </div>
     </footer>
 

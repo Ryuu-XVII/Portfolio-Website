@@ -112,10 +112,10 @@ class Particle {
 function spawnParticles() {
   particlesArray = [];
   // Responsive density
-  const particleCount = Math.floor((canvasElement.width * canvasElement.height) / 11000);
-  const colorPool = ['rgba(0, 242, 254, 0.25)', 'rgba(157, 78, 221, 0.25)', 'rgba(255, 0, 127, 0.15)'];
+  const particleCount = Math.floor((canvasElement.width * canvasElement.height) / 16000);
+  const colorPool = ['rgba(244, 163, 215, 0.35)', 'rgba(166, 121, 255, 0.3)', 'rgba(255, 220, 245, 0.25)'];
 
-  for (let i = 0; i < Math.min(particleCount, 120); i++) {
+  for (let i = 0; i < Math.min(particleCount, 80); i++) {
     let size = (Math.random() * 2) + 1.5;
     let x = (Math.random() * ((canvasElement.width - size * 2) - (size * 2)) + size * 2);
     let y = (Math.random() * ((canvasElement.height - size * 2) - (size * 2)) + size * 2);
@@ -150,7 +150,7 @@ function connectParticles() {
 
       if (distance < maxDistance) {
         opacityVal = (1 - (distance / maxDistance)) * 0.12;
-        canvasCtx.strokeStyle = `rgba(0, 242, 254, ${opacityVal})`;
+        canvasCtx.strokeStyle = `rgba(232, 160, 220, ${opacityVal})`;
         canvasCtx.lineWidth = 0.8;
         canvasCtx.beginPath();
         canvasCtx.moveTo(particlesArray[a].x, particlesArray[a].y);
@@ -362,7 +362,7 @@ function initPageSpecifics() {
   if (typewriterEl) {
     if (typewriterTimer) clearInterval(typewriterTimer);
 
-    const words = ["Software Engineering Graduate", "AI Applications Developer", "Full-Stack Web Architect"];
+    const words = ["On-device AI applications", "Full-stack web platforms", "Cross-platform mobile apps"];
     let wordIndex = 0;
     let charIndex = 0;
     let isDeleting = false;
@@ -431,6 +431,23 @@ function initPageSpecifics() {
         });
       };
     });
+  }
+
+  // --- C2. HOME CONTACT FORM (composes an email in the visitor's mail app) ---
+  const ctaForm = document.getElementById('cta-form');
+  if (ctaForm) {
+    ctaForm.onsubmit = (e) => {
+      e.preventDefault();
+      if (!ctaForm.reportValidity()) return;
+
+      const name = ctaForm.elements.name.value.trim();
+      const email = ctaForm.elements.email.value.trim();
+      const message = ctaForm.elements.message.value.trim();
+      const subject = `Project enquiry from ${name}`;
+      const body = `${message}\n\n${name}\n${email}`;
+
+      window.location.href = `mailto:adnaanhoosen51@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    };
   }
 
   // --- D. INTERACTIVE PROJECT DETAILS DRAWER/MODAL ---
