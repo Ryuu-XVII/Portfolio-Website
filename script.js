@@ -113,7 +113,7 @@ function spawnParticles() {
   particlesArray = [];
   // Responsive density
   const particleCount = Math.floor((canvasElement.width * canvasElement.height) / 16000);
-  const colorPool = ['rgba(244, 163, 215, 0.35)', 'rgba(166, 121, 255, 0.3)', 'rgba(255, 220, 245, 0.25)'];
+  const colorPool = ['rgba(56, 217, 245, 0.35)', 'rgba(59, 130, 246, 0.3)', 'rgba(200, 235, 255, 0.25)'];
 
   for (let i = 0; i < Math.min(particleCount, 80); i++) {
     let size = (Math.random() * 2) + 1.5;
@@ -150,7 +150,7 @@ function connectParticles() {
 
       if (distance < maxDistance) {
         opacityVal = (1 - (distance / maxDistance)) * 0.12;
-        canvasCtx.strokeStyle = `rgba(232, 160, 220, ${opacityVal})`;
+        canvasCtx.strokeStyle = `rgba(56, 189, 248, ${opacityVal})`;
         canvasCtx.lineWidth = 0.8;
         canvasCtx.beginPath();
         canvasCtx.moveTo(particlesArray[a].x, particlesArray[a].y);
