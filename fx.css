@@ -1,0 +1,446 @@
+/* ==========================================================================
+   Motion layer styles — companion to fx.js (Motion library).
+   Everything is scoped under html.fx, which fx.js only adds when the
+   library loaded and the visitor has not asked for reduced motion.
+   ========================================================================== */
+
+@property --fx-a {
+  syntax: '<angle>';
+  inherits: false;
+  initial-value: 0deg;
+}
+
+/* Motion drives the reveals, so the CSS transitions step aside until done */
+.fx .reveal:not(.fx-done),
+.fx .reveal-left:not(.fx-done),
+.fx .reveal-right:not(.fx-done) {
+  transition: none;
+}
+
+/* ------------------------------------------------ Split-word headings */
+.fx-w {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: bottom;
+  padding: 0.14em 0.1em 0.2em;
+  margin: -0.14em -0.1em -0.2em;
+}
+
+.fx-wi {
+  display: inline-block;
+  will-change: transform;
+}
+
+/* ---------------------------------------------------- Scroll progress */
+.fx-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 300;
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, #67e8f9, #3b82f6);
+  box-shadow: 0 0 12px rgba(56, 217, 245, 0.8);
+  pointer-events: none;
+}
+
+/* ------------------------------------------------- Cursor glow + ring */
+.fx-glow,
+.fx-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.fx-glow {
+  width: 560px;
+  height: 560px;
+  margin: -280px 0 0 -280px;
+  z-index: -1;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.13), rgba(59, 130, 246, 0.05) 40%, transparent 68%);
+}
+
+.fx-cursor {
+  width: 36px;
+  height: 36px;
+  margin: -18px 0 0 -18px;
+  z-index: 950;
+}
+
+.fx-cursor i {
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid rgba(56, 217, 245, 0.7);
+  transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease;
+}
+
+.fx-cursor.is-hover i {
+  transform: scale(1.7);
+  background: rgba(56, 217, 245, 0.1);
+  border-color: rgba(56, 217, 245, 0.3);
+}
+
+.fx-cursor.is-down i {
+  transform: scale(0.7);
+}
+
+/* --------------------------------------------------- Shooting stars */
+.fx-sky {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.fx-sky i {
+  position: absolute;
+  width: 140px;
+  height: 1px;
+  border-radius: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200, 235, 255, 0.9));
+  box-shadow: 0 0 8px rgba(56, 217, 245, 0.8);
+  rotate: 24deg;
+  opacity: 0;
+}
+
+/* ------------------------------------------------ Page-change curtain */
+.fx-curtain {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  pointer-events: none;
+}
+
+.fx-curtain i {
+  background: linear-gradient(180deg, #0a1424, #070b14);
+  border-top: 2px solid var(--accent-cyan);
+  box-shadow: 0 -8px 30px rgba(56, 217, 245, 0.35);
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+}
+
+/* -------------------------------------------------------- Hero extras */
+.fx-orbits {
+  position: absolute;
+  inset: -22%;
+  pointer-events: none;
+}
+
+.fx-ring {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  fill: none;
+  stroke: rgba(56, 217, 245, 0.5);
+  stroke-width: 1;
+}
+
+.fx-ring.r2 {
+  inset: 7%;
+  width: 86%;
+  height: 86%;
+  stroke: rgba(59, 130, 246, 0.9);
+  stroke-width: 1.5;
+}
+
+.fx-ring.r3 {
+  inset: 13%;
+  width: 74%;
+  height: 74%;
+  stroke: rgba(150, 210, 255, 0.45);
+}
+
+.fx-ring circle {
+  vector-effect: non-scaling-stroke;
+}
+
+.fx-ring .sat {
+  fill: #67e8f9;
+  stroke: none;
+  filter: drop-shadow(0 0 4px #38d9f5);
+}
+
+.fx-grid {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 44%;
+  z-index: -1;
+  overflow: hidden;
+  perspective: 560px;
+  pointer-events: none;
+  opacity: 0.32;
+  -webkit-mask-image: linear-gradient(180deg, transparent, #000 55%, transparent);
+  mask-image: linear-gradient(180deg, transparent, #000 55%, transparent);
+}
+
+.fx-grid i {
+  position: absolute;
+  left: -50%;
+  right: -50%;
+  top: 0;
+  height: 220%;
+  transform: rotateX(64deg);
+  transform-origin: 50% 0;
+  background-image:
+    linear-gradient(rgba(56, 217, 245, 0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(56, 217, 245, 0.4) 1px, transparent 1px);
+  background-size: 44px 44px;
+}
+
+/* ------------------------------------------------------- Tech marquee */
+.fx-marquee {
+  display: grid;
+  gap: 0.5rem;
+  padding: 1rem 0 3rem;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 12%, #000 88%, transparent);
+}
+
+.fx-marquee-row {
+  display: flex;
+  width: max-content;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.fx-marquee-row span {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.1em;
+  padding-right: 1.1em;
+  font-size: clamp(1.5rem, 4.4vw, 3.2rem);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(150, 200, 255, 0.3);
+}
+
+.fx-marquee-row span.is-solid {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 400;
+  text-transform: none;
+  color: var(--accent-cyan);
+  -webkit-text-stroke: 0;
+}
+
+.fx-marquee-row span::after {
+  content: '';
+  width: 0.28em;
+  height: 0.28em;
+  rotate: 45deg;
+  background: var(--accent-cyan);
+  box-shadow: 0 0 12px var(--accent-cyan);
+}
+
+/* ------------------------------------------ Card glare, beams, shines */
+@media (hover: hover) {
+  .fx .glass-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    border-radius: inherit;
+    background: radial-gradient(420px circle at var(--mx, 50%) var(--my, 50%), rgba(56, 217, 245, 0.16), transparent 60%);
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+  }
+
+  .fx .glass-card:hover::before {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 769px) {
+  .fx .band:not(.process-band)::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: conic-gradient(from var(--fx-a), transparent 0 76%, rgba(56, 217, 245, 0.95) 92%, transparent 100%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: fx-beam 8s linear infinite;
+    pointer-events: none;
+  }
+}
+
+@keyframes fx-beam {
+  to {
+    --fx-a: 360deg;
+  }
+}
+
+.fx .btn-primary {
+  position: relative;
+  overflow: hidden;
+}
+
+.fx .btn-primary::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -60%;
+  width: 40%;
+  background: linear-gradient(100deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-20deg);
+  animation: fx-shine 4.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes fx-shine {
+  0%,
+  60% {
+    left: -60%;
+  }
+
+  100% {
+    left: 130%;
+  }
+}
+
+.fx .icon-ring {
+  position: relative;
+}
+
+.fx .icon-ring::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 50%;
+  border: 1px solid rgba(56, 217, 245, 0.7);
+  animation: fx-ping 3.2s ease-out infinite;
+  pointer-events: none;
+}
+
+.fx .service-item:nth-child(2) .icon-ring::after,
+.fx .process-step:nth-child(2) .icon-ring::after { animation-delay: 0.4s; }
+.fx .service-item:nth-child(3) .icon-ring::after,
+.fx .process-step:nth-child(3) .icon-ring::after { animation-delay: 0.8s; }
+.fx .service-item:nth-child(4) .icon-ring::after,
+.fx .process-step:nth-child(4) .icon-ring::after { animation-delay: 1.2s; }
+.fx .process-step:nth-child(5) .icon-ring::after { animation-delay: 1.6s; }
+
+@keyframes fx-ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+
+  70%,
+  100% {
+    transform: scale(1.9);
+    opacity: 0;
+  }
+}
+
+.fx .project-card-img {
+  scale: 1.14;
+}
+
+/* ------------------------------------------ Lines that draw on scroll */
+.fx .process-steps::before {
+  clip-path: inset(-12px calc(100% - var(--fx-line, 100%)) -12px -12px);
+}
+
+.fx .timeline-track::before {
+  clip-path: inset(0 -12px calc(100% - var(--fx-line, 100%)) -12px);
+}
+
+@media (max-width: 900px) {
+  .fx .process-steps::before {
+    clip-path: inset(-12px -12px calc(100% - var(--fx-line, 100%)) -12px);
+  }
+}
+
+.fx-pulse {
+  position: absolute;
+  top: 24px;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #cffafe;
+  box-shadow: 0 0 14px 4px rgba(56, 217, 245, 0.9);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* ------------------------------------------------ Planet and archway */
+.fx-moon {
+  position: absolute;
+  inset: -34%;
+  pointer-events: none;
+}
+
+.fx-moon::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  border-radius: 50%;
+  background: #e0f7ff;
+  box-shadow: 0 0 12px rgba(56, 217, 245, 0.9);
+}
+
+.fx-sun {
+  position: absolute;
+  left: 50%;
+  top: 62%;
+  width: 90px;
+  height: 90px;
+  margin: -45px 0 0 -45px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(224, 247, 255, 0.55), transparent 65%);
+  pointer-events: none;
+}
+
+.fx-mote {
+  position: absolute;
+  bottom: 28%;
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background: #cffafe;
+  box-shadow: 0 0 6px #38d9f5;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* -------------------------------------------------------------- Phones */
+@media (max-width: 768px) {
+  .fx-grid,
+  .fx-pulse {
+    display: none;
+  }
+
+  .fx-orbits {
+    inset: -20%;
+  }
+
+  .fx-marquee {
+    padding: 0.5rem 0 1.25rem;
+  }
+}

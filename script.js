@@ -263,6 +263,7 @@ function loadPageContent(url, pushState = true) {
 
   // Transition Fade Out
   mainContent.classList.add('fade-out');
+  if (window.SiteFX) window.SiteFX.cover();
 
   setTimeout(() => {
     fetch(url)
@@ -716,6 +717,9 @@ function initPageSpecifics() {
       };
     });
   }
+
+  // --- E. MOTION LAYER (fx.js) ---
+  if (window.SiteFX) window.SiteFX.init();
 }
 
 // One-time modal close/escape/backdrop bindings, safe to call once per page load
